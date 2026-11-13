@@ -1,0 +1,462 @@
+{
+  "dataset": "22 hand-written synthetic questions; smoke benchmark, not independent generalization evidence",
+  "positive_questions": 19,
+  "negative_questions": 3,
+  "documents": 6,
+  "chunks": 6,
+  "evaluation_sha256": "e9044b721866b61c831930dd833f098349cb22b0c03243dc6dbb3c57970ecece",
+  "mode": "extractive; LSA + TF-IDF; no hosted LLM",
+  "metrics": {
+    "retrieval_hit_at_3": 1.0,
+    "retrieval_top_1": 1.0,
+    "expected_phrase_in_answer": 0.8421052631578947,
+    "out_of_domain_abstention": 1.0,
+    "latency_p50_ms": 12.29065004736185,
+    "latency_p95_ms": 38.45563993090762
+  },
+  "details": [
+    {
+      "question": "How do I request production access?",
+      "doc_id": "access",
+      "expected_phrase": "Access Portal",
+      "answer": "Employees request production access through the Access Portal. Contractors cannot receive production access under this policy. [access:0]",
+      "sources": [
+        {
+          "id": "access:0",
+          "doc_id": "access",
+          "text": "# Access policy \u2014 fictional Northstar Labs\nEmployees request production access through the Access Portal. A manager and the service owner must approve each request. Access expires after 30 days unless renewed.\n\nContractors receive read-only staging access. Contractors cannot receive production access under this policy. All accounts must use multifactor authentication.",
+          "score": 0.5828,
+          "lexical_score": 0.5108
+        }
+      ],
+      "abstained": false,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 39.3588999286294
+    },
+    {
+      "question": "Who approves production access?",
+      "doc_id": "access",
+      "expected_phrase": "service owner",
+      "answer": "Employees request production access through the Access Portal. Contractors cannot receive production access under this policy. [access:0]",
+      "sources": [
+        {
+          "id": "access:0",
+          "doc_id": "access",
+          "text": "# Access policy \u2014 fictional Northstar Labs\nEmployees request production access through the Access Portal. A manager and the service owner must approve each request. Access expires after 30 days unless renewed.\n\nContractors receive read-only staging access. Contractors cannot receive production access under this policy. All accounts must use multifactor authentication.",
+          "score": 0.571,
+          "lexical_score": 0.4984
+        },
+        {
+          "id": "retention:0",
+          "doc_id": "retention",
+          "text": "# Data retention policy \u2014 fictional Northstar Labs\nApplication logs are retained for 30 days. Financial audit records are retained for seven years. Customer deletion requests are completed within 21 days after identity verification.\n\nProduction backups are encrypted and retained for 90 days. The security team reviews data access permissions quarterly. Sensitive personal information must not appear in application logs.",
+          "score": 0.1633,
+          "lexical_score": 0.0748
+        },
+        {
+          "id": "deployments:0",
+          "doc_id": "deployments",
+          "text": "# Deployment guide \u2014 fictional Northstar Labs\nProduction deployments require a passing test suite and one reviewer approval. The release engineer deploys to staging before production.\n\nRoll back if the error rate exceeds two percent for five consecutive minutes. Database migrations must be backward compatible. Deployments are paused during an active severity one incident.",
+          "score": 0.0898,
+          "lexical_score": 0.0631
+        }
+      ],
+      "abstained": false,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 8.969199960120022
+    },
+    {
+      "question": "When does access expire?",
+      "doc_id": "access",
+      "expected_phrase": "30 days",
+      "answer": "Employees request production access through the Access Portal. Contractors cannot receive production access under this policy. [access:0]",
+      "sources": [
+        {
+          "id": "access:0",
+          "doc_id": "access",
+          "text": "# Access policy \u2014 fictional Northstar Labs\nEmployees request production access through the Access Portal. A manager and the service owner must approve each request. Access expires after 30 days unless renewed.\n\nContractors receive read-only staging access. Contractors cannot receive production access under this policy. All accounts must use multifactor authentication.",
+          "score": 0.5878,
+          "lexical_score": 0.5177
+        },
+        {
+          "id": "retention:0",
+          "doc_id": "retention",
+          "text": "# Data retention policy \u2014 fictional Northstar Labs\nApplication logs are retained for 30 days. Financial audit records are retained for seven years. Customer deletion requests are completed within 21 days after identity verification.\n\nProduction backups are encrypted and retained for 90 days. The security team reviews data access permissions quarterly. Sensitive personal information must not appear in application logs.",
+          "score": 0.1755,
+          "lexical_score": 0.0852
+        }
+      ],
+      "abstained": false,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 9.13130003027618
+    },
+    {
+      "question": "Can contractors get production access?",
+      "doc_id": "access",
+      "expected_phrase": "cannot",
+      "answer": "Employees request production access through the Access Portal. Contractors cannot receive production access under this policy. [access:0]",
+      "sources": [
+        {
+          "id": "access:0",
+          "doc_id": "access",
+          "text": "# Access policy \u2014 fictional Northstar Labs\nEmployees request production access through the Access Portal. A manager and the service owner must approve each request. Access expires after 30 days unless renewed.\n\nContractors receive read-only staging access. Contractors cannot receive production access under this policy. All accounts must use multifactor authentication.",
+          "score": 0.5977,
+          "lexical_score": 0.5288
+        },
+        {
+          "id": "retention:0",
+          "doc_id": "retention",
+          "text": "# Data retention policy \u2014 fictional Northstar Labs\nApplication logs are retained for 30 days. Financial audit records are retained for seven years. Customer deletion requests are completed within 21 days after identity verification.\n\nProduction backups are encrypted and retained for 90 days. The security team reviews data access permissions quarterly. Sensitive personal information must not appear in application logs.",
+          "score": 0.1486,
+          "lexical_score": 0.0612
+        }
+      ],
+      "abstained": false,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 12.957699946127832
+    },
+    {
+      "question": "What is the expense submission deadline?",
+      "doc_id": "expenses",
+      "expected_phrase": "14 days",
+      "answer": "Expense claims must be submitted within 14 days of travel. Finance reviews complete expense claims within five business days. [expenses:0]",
+      "sources": [
+        {
+          "id": "expenses:0",
+          "doc_id": "expenses",
+          "text": "# Travel and expense policy \u2014 fictional Northstar Labs\nExpense claims must be submitted within 14 days of travel. Employees attach an itemized receipt for purchases above 25 dollars.\n\nThe daily meal reimbursement limit is 60 dollars. International travel requires director approval before booking. Finance reviews complete expense claims within five business days.",
+          "score": 0.4274,
+          "lexical_score": 0.3269
+        }
+      ],
+      "abstained": false,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 15.985499951057136
+    },
+    {
+      "question": "What is the meal reimbursement limit?",
+      "doc_id": "expenses",
+      "expected_phrase": "60 dollars",
+      "answer": "The daily meal reimbursement limit is 60 dollars. [expenses:0]",
+      "sources": [
+        {
+          "id": "expenses:0",
+          "doc_id": "expenses",
+          "text": "# Travel and expense policy \u2014 fictional Northstar Labs\nExpense claims must be submitted within 14 days of travel. Employees attach an itemized receipt for purchases above 25 dollars.\n\nThe daily meal reimbursement limit is 60 dollars. International travel requires director approval before booking. Finance reviews complete expense claims within five business days.",
+          "score": 0.3566,
+          "lexical_score": 0.2437
+        }
+      ],
+      "abstained": false,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 12.715999968349934
+    },
+    {
+      "question": "Who approves international travel?",
+      "doc_id": "expenses",
+      "expected_phrase": "director",
+      "answer": "Expense claims must be submitted within 14 days of travel. International travel requires director approval before booking. [expenses:0]",
+      "sources": [
+        {
+          "id": "expenses:0",
+          "doc_id": "expenses",
+          "text": "# Travel and expense policy \u2014 fictional Northstar Labs\nExpense claims must be submitted within 14 days of travel. Employees attach an itemized receipt for purchases above 25 dollars.\n\nThe daily meal reimbursement limit is 60 dollars. International travel requires director approval before booking. Finance reviews complete expense claims within five business days.",
+          "score": 0.4169,
+          "lexical_score": 0.3146
+        }
+      ],
+      "abstained": false,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 11.739899986423552
+    },
+    {
+      "question": "How quickly are severity one incidents acknowledged?",
+      "doc_id": "incident",
+      "expected_phrase": "15 minutes",
+      "answer": "A severity one incident means a complete production outage. The on-call engineer acknowledges severity one incidents within 15 minutes and posts updates every 30 minutes. [incident:0]",
+      "sources": [
+        {
+          "id": "incident:0",
+          "doc_id": "incident",
+          "text": "# Incident response guide \u2014 fictional Northstar Labs\nA severity one incident means a complete production outage. The on-call engineer acknowledges severity one incidents within 15 minutes and posts updates every 30 minutes.\n\nA written incident review is due within three business days after resolution. The incident commander coordinates recovery; the communications lead updates customers. Store incident evidence in the incident workspace.",
+          "score": 0.3289,
+          "lexical_score": 0.2111
+        }
+      ],
+      "abstained": false,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 12.568900012411177
+    },
+    {
+      "question": "How frequently should incident updates be posted?",
+      "doc_id": "incident",
+      "expected_phrase": "30 minutes",
+      "answer": "The incident commander coordinates recovery; the communications lead updates customers. Store incident evidence in the incident workspace. [incident:0]",
+      "sources": [
+        {
+          "id": "incident:0",
+          "doc_id": "incident",
+          "text": "# Incident response guide \u2014 fictional Northstar Labs\nA severity one incident means a complete production outage. The on-call engineer acknowledges severity one incidents within 15 minutes and posts updates every 30 minutes.\n\nA written incident review is due within three business days after resolution. The incident commander coordinates recovery; the communications lead updates customers. Store incident evidence in the incident workspace.",
+          "score": 0.5587,
+          "lexical_score": 0.4813
+        },
+        {
+          "id": "deployments:0",
+          "doc_id": "deployments",
+          "text": "# Deployment guide \u2014 fictional Northstar Labs\nProduction deployments require a passing test suite and one reviewer approval. The release engineer deploys to staging before production.\n\nRoll back if the error rate exceeds two percent for five consecutive minutes. Database migrations must be backward compatible. Deployments are paused during an active severity one incident.",
+          "score": 0.2042,
+          "lexical_score": 0.0663
+        }
+      ],
+      "abstained": false,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 9.900900069624186
+    },
+    {
+      "question": "When is a written incident review due?",
+      "doc_id": "incident",
+      "expected_phrase": "three business days",
+      "answer": "A written incident review is due within three business days after resolution. Store incident evidence in the incident workspace. [incident:0]",
+      "sources": [
+        {
+          "id": "incident:0",
+          "doc_id": "incident",
+          "text": "# Incident response guide \u2014 fictional Northstar Labs\nA severity one incident means a complete production outage. The on-call engineer acknowledges severity one incidents within 15 minutes and posts updates every 30 minutes.\n\nA written incident review is due within three business days after resolution. The incident commander coordinates recovery; the communications lead updates customers. Store incident evidence in the incident workspace.",
+          "score": 0.4755,
+          "lexical_score": 0.3834
+        }
+      ],
+      "abstained": false,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 12.112500029616058
+    },
+    {
+      "question": "What is required before production deployments?",
+      "doc_id": "deployments",
+      "expected_phrase": "passing test suite",
+      "answer": "Production deployments require a passing test suite and one reviewer approval. Deployments are paused during an active severity one incident. [deployments:0]",
+      "sources": [
+        {
+          "id": "deployments:0",
+          "doc_id": "deployments",
+          "text": "# Deployment guide \u2014 fictional Northstar Labs\nProduction deployments require a passing test suite and one reviewer approval. The release engineer deploys to staging before production.\n\nRoll back if the error rate exceeds two percent for five consecutive minutes. Database migrations must be backward compatible. Deployments are paused during an active severity one incident.",
+          "score": 0.4099,
+          "lexical_score": 0.3081
+        }
+      ],
+      "abstained": false,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 12.757600052282214
+    },
+    {
+      "question": "When should a deployment roll back?",
+      "doc_id": "deployments",
+      "expected_phrase": "two percent",
+      "answer": "Roll back if the error rate exceeds two percent for five consecutive minutes. [deployments:0]",
+      "sources": [
+        {
+          "id": "deployments:0",
+          "doc_id": "deployments",
+          "text": "# Deployment guide \u2014 fictional Northstar Labs\nProduction deployments require a passing test suite and one reviewer approval. The release engineer deploys to staging before production.\n\nRoll back if the error rate exceeds two percent for five consecutive minutes. Database migrations must be backward compatible. Deployments are paused during an active severity one incident.",
+          "score": 0.303,
+          "lexical_score": 0.1804
+        }
+      ],
+      "abstained": false,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 10.29849995393306
+    },
+    {
+      "question": "What is required of database migrations?",
+      "doc_id": "deployments",
+      "expected_phrase": "backward compatible",
+      "answer": "Database migrations must be backward compatible. [deployments:0]",
+      "sources": [
+        {
+          "id": "deployments:0",
+          "doc_id": "deployments",
+          "text": "# Deployment guide \u2014 fictional Northstar Labs\nProduction deployments require a passing test suite and one reviewer approval. The release engineer deploys to staging before production.\n\nRoll back if the error rate exceeds two percent for five consecutive minutes. Database migrations must be backward compatible. Deployments are paused during an active severity one incident.",
+          "score": 0.3375,
+          "lexical_score": 0.221
+        }
+      ],
+      "abstained": false,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 109.35039992909878
+    },
+    {
+      "question": "How long are application logs retained?",
+      "doc_id": "retention",
+      "expected_phrase": "30 days",
+      "answer": "Application logs are retained for 30 days. Sensitive personal information must not appear in application logs. [retention:0]",
+      "sources": [
+        {
+          "id": "retention:0",
+          "doc_id": "retention",
+          "text": "# Data retention policy \u2014 fictional Northstar Labs\nApplication logs are retained for 30 days. Financial audit records are retained for seven years. Customer deletion requests are completed within 21 days after identity verification.\n\nProduction backups are encrypted and retained for 90 days. The security team reviews data access permissions quarterly. Sensitive personal information must not appear in application logs.",
+          "score": 0.544,
+          "lexical_score": 0.4648
+        }
+      ],
+      "abstained": false,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 21.29369997419417
+    },
+    {
+      "question": "How long do we retain production backups?",
+      "doc_id": "retention",
+      "expected_phrase": "90 days",
+      "answer": "Production backups are encrypted and retained for 90 days. [retention:0]",
+      "sources": [
+        {
+          "id": "retention:0",
+          "doc_id": "retention",
+          "text": "# Data retention policy \u2014 fictional Northstar Labs\nApplication logs are retained for 30 days. Financial audit records are retained for seven years. Customer deletion requests are completed within 21 days after identity verification.\n\nProduction backups are encrypted and retained for 90 days. The security team reviews data access permissions quarterly. Sensitive personal information must not appear in application logs.",
+          "score": 0.2771,
+          "lexical_score": 0.1594
+        }
+      ],
+      "abstained": false,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 14.40119999460876
+    },
+    {
+      "question": "What is the deadline for customer deletion requests?",
+      "doc_id": "retention",
+      "expected_phrase": "21 days",
+      "answer": "Customer deletion requests are completed within 21 days after identity verification. [retention:0]",
+      "sources": [
+        {
+          "id": "retention:0",
+          "doc_id": "retention",
+          "text": "# Data retention policy \u2014 fictional Northstar Labs\nApplication logs are retained for 30 days. Financial audit records are retained for seven years. Customer deletion requests are completed within 21 days after identity verification.\n\nProduction backups are encrypted and retained for 90 days. The security team reviews data access permissions quarterly. Sensitive personal information must not appear in application logs.",
+          "score": 0.3378,
+          "lexical_score": 0.2247
+        },
+        {
+          "id": "leave:0",
+          "doc_id": "leave",
+          "text": "# Leave policy \u2014 fictional Northstar Labs\nEmployees submit planned leave requests ten business days before the start date. Managers approve requests in the Leave Portal.\n\nEmployees receive 20 days of annual leave. Up to five unused days may carry over into the next year. Sick leave should be reported to the manager before the working day begins.",
+          "score": 0.0646,
+          "lexical_score": 0.0683
+        }
+      ],
+      "abstained": false,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 15.812600031495094
+    },
+    {
+      "question": "How early should I submit planned leave?",
+      "doc_id": "leave",
+      "expected_phrase": "ten business days",
+      "answer": "Employees submit planned leave requests ten business days before the start date. Managers approve requests in the Leave Portal. [leave:0]",
+      "sources": [
+        {
+          "id": "leave:0",
+          "doc_id": "leave",
+          "text": "# Leave policy \u2014 fictional Northstar Labs\nEmployees submit planned leave requests ten business days before the start date. Managers approve requests in the Leave Portal.\n\nEmployees receive 20 days of annual leave. Up to five unused days may carry over into the next year. Sick leave should be reported to the manager before the working day begins.",
+          "score": 0.5245,
+          "lexical_score": 0.4418
+        }
+      ],
+      "abstained": false,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 10.933200013823807
+    },
+    {
+      "question": "How many annual leave days do employees receive?",
+      "doc_id": "leave",
+      "expected_phrase": "20 days",
+      "answer": "Employees submit planned leave requests ten business days before the start date. Employees receive 20 days of annual leave. [leave:0]",
+      "sources": [
+        {
+          "id": "leave:0",
+          "doc_id": "leave",
+          "text": "# Leave policy \u2014 fictional Northstar Labs\nEmployees submit planned leave requests ten business days before the start date. Managers approve requests in the Leave Portal.\n\nEmployees receive 20 days of annual leave. Up to five unused days may carry over into the next year. Sick leave should be reported to the manager before the working day begins.",
+          "score": 0.5675,
+          "lexical_score": 0.4915
+        },
+        {
+          "id": "access:0",
+          "doc_id": "access",
+          "text": "# Access policy \u2014 fictional Northstar Labs\nEmployees request production access through the Access Portal. A manager and the service owner must approve each request. Access expires after 30 days unless renewed.\n\nContractors receive read-only staging access. Contractors cannot receive production access under this policy. All accounts must use multifactor authentication.",
+          "score": 0.1732,
+          "lexical_score": 0.0944
+        }
+      ],
+      "abstained": false,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 8.275000029243529
+    },
+    {
+      "question": "How many unused leave days carry over?",
+      "doc_id": "leave",
+      "expected_phrase": "five",
+      "answer": "Employees receive 20 days of annual leave. Up to five unused days may carry over into the next year. [leave:0]",
+      "sources": [
+        {
+          "id": "leave:0",
+          "doc_id": "leave",
+          "text": "# Leave policy \u2014 fictional Northstar Labs\nEmployees submit planned leave requests ten business days before the start date. Managers approve requests in the Leave Portal.\n\nEmployees receive 20 days of annual leave. Up to five unused days may carry over into the next year. Sick leave should be reported to the manager before the working day begins.",
+          "score": 0.5471,
+          "lexical_score": 0.4672
+        }
+      ],
+      "abstained": false,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 12.468800065107644
+    },
+    {
+      "question": "What is the capital of Neptune?",
+      "doc_id": null,
+      "expected_phrase": "",
+      "answer": "I could not find supporting information in these documents.",
+      "sources": [],
+      "abstained": true,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 9.983199997805059
+    },
+    {
+      "question": "Explain quantum entanglement.",
+      "doc_id": null,
+      "expected_phrase": "",
+      "answer": "I could not find supporting information in these documents.",
+      "sources": [],
+      "abstained": true,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 6.853200029581785
+    },
+    {
+      "question": "Who won the football championship?",
+      "doc_id": null,
+      "expected_phrase": "",
+      "answer": "I could not find supporting information in these documents.",
+      "sources": [],
+      "abstained": true,
+      "mode": "extractive",
+      "prompt_version": "grounded-extractive-v1",
+      "latency_ms": 8.033599937334657
+    }
+  ]
+}

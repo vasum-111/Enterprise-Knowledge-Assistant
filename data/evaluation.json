@@ -1,0 +1,112 @@
+[
+  {
+    "question": "How do I request production access?",
+    "doc_id": "access",
+    "expected_phrase": "Access Portal"
+  },
+  {
+    "question": "Who approves production access?",
+    "doc_id": "access",
+    "expected_phrase": "service owner"
+  },
+  {
+    "question": "When does access expire?",
+    "doc_id": "access",
+    "expected_phrase": "30 days"
+  },
+  {
+    "question": "Can contractors get production access?",
+    "doc_id": "access",
+    "expected_phrase": "cannot"
+  },
+  {
+    "question": "What is the expense submission deadline?",
+    "doc_id": "expenses",
+    "expected_phrase": "14 days"
+  },
+  {
+    "question": "What is the meal reimbursement limit?",
+    "doc_id": "expenses",
+    "expected_phrase": "60 dollars"
+  },
+  {
+    "question": "Who approves international travel?",
+    "doc_id": "expenses",
+    "expected_phrase": "director"
+  },
+  {
+    "question": "How quickly are severity one incidents acknowledged?",
+    "doc_id": "incident",
+    "expected_phrase": "15 minutes"
+  },
+  {
+    "question": "How frequently should incident updates be posted?",
+    "doc_id": "incident",
+    "expected_phrase": "30 minutes"
+  },
+  {
+    "question": "When is a written incident review due?",
+    "doc_id": "incident",
+    "expected_phrase": "three business days"
+  },
+  {
+    "question": "What is required before production deployments?",
+    "doc_id": "deployments",
+    "expected_phrase": "passing test suite"
+  },
+  {
+    "question": "When should a deployment roll back?",
+    "doc_id": "deployments",
+    "expected_phrase": "two percent"
+  },
+  {
+    "question": "What is required of database migrations?",
+    "doc_id": "deployments",
+    "expected_phrase": "backward compatible"
+  },
+  {
+    "question": "How long are application logs retained?",
+    "doc_id": "retention",
+    "expected_phrase": "30 days"
+  },
+  {
+    "question": "How long do we retain production backups?",
+    "doc_id": "retention",
+    "expected_phrase": "90 days"
+  },
+  {
+    "question": "What is the deadline for customer deletion requests?",
+    "doc_id": "retention",
+    "expected_phrase": "21 days"
+  },
+  {
+    "question": "How early should I submit planned leave?",
+    "doc_id": "leave",
+    "expected_phrase": "ten business days"
+  },
+  {
+    "question": "How many annual leave days do employees receive?",
+    "doc_id": "leave",
+    "expected_phrase": "20 days"
+  },
+  {
+    "question": "How many unused leave days carry over?",
+    "doc_id": "leave",
+    "expected_phrase": "five"
+  },
+  {
+    "question": "What is the capital of Neptune?",
+    "doc_id": null,
+    "expected_phrase": ""
+  },
+  {
+    "question": "Explain quantum entanglement.",
+    "doc_id": null,
+    "expected_phrase": ""
+  },
+  {
+    "question": "Who won the football championship?",
+    "doc_id": null,
+    "expected_phrase": ""
+  }
+]

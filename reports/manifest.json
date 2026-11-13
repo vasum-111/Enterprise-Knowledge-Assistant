@@ -1,0 +1,36 @@
+{
+  "packaged_on": "2026-11-13",
+  "python": "3.12.14",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "dependencies": {
+    "fastapi": "0.162.5",
+    "uvicorn": "0.54.0",
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "scipy": "1.18.1",
+    "pytest": "9.2.0",
+    "httpx": "0.28.1",
+    "llama-index-core": "0.14.25",
+    "langchain-core": "1.8.0",
+    "mlflow-skinny": "3.18.0",
+    "alembic": "1.20.1",
+    "sqlalchemy": "2.1.8"
+  },
+  "source_and_data_sha256": {
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/api.py": "ee89c42f95e61a0911f135a2608c667a7908afbebc3654238fe5d912c7c8a3f8",
+    "src/evaluate.py": "1bcbec511e813a451e35aa64893d1f96149466a0db2147694d4c4e2420b31263",
+    "src/generation.py": "eae05bfadefe03da302646ebf69d4343171ec15516cc468e958362718f9796b9",
+    "src/retrieval.py": "9cecbcdb368796b89675fa3f19fbd36919c93283daad2fca6ecef7324b2e5eea",
+    "data/documents/access.md": "df51308e7eec526bedec75e20f92573d0e2a7a2f24b75144758494b29e698b43",
+    "data/documents/deployments.md": "058aeea26c518d2378e5e6d093b2f65c78289e6ee16c0c61e4c1009ead20178c",
+    "data/documents/expenses.md": "7667fd2c1108be093324496065cdabff60e93a0564e5a0e89cd570a8905ca68a",
+    "data/documents/incident.md": "0b5053c7329a2204e82ce24ff7e3f979c74bd5924edcea186a3617ede3ce3b25",
+    "data/documents/leave.md": "f35d07b12d39f5fc49f4322d4493bf0e43a2a7a4fd9618d33d6b05df5e9e0e27",
+    "data/documents/retention.md": "c460cb6c4309bd91c0684b879d74aac560167e6752978e5c8a909df08f58600b",
+    "data/evaluation.json": "e9044b721866b61c831930dd833f098349cb22b0c03243dc6dbb3c57970ecece",
+    "tests/test_generation.py": "a42b313075b4384d8e86bddf2c79478b66820a153780e90716dae6c45c4311b3",
+    "tests/test_retrieval.py": "7bfef038362e407caf816132c26c2acd962b6ad047bc601372b0cb157afcf588"
+  },
+  "scope": "Delivered source manifest; no remote commit/deployment implied."
+}
